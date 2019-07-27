@@ -11,5 +11,12 @@ eureka:
   instance:
     prefer-ip-address: true
 
-ribbon:
-  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: *
+
